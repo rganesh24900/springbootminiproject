@@ -2,7 +2,7 @@ package com.example.springbootproject;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import com.example.springbootproject.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -46,12 +46,8 @@ public class Implementation implements BloodGroup {
     public Entities addBlood(Entities BloodGroup) {
 
 
-
-
         list.add(BloodGroup);
         return BloodGroup;
-
-
 
 
     }

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.springbootproject.*;
+
 import java.util.List;
 import java.util.Map;
 
@@ -29,18 +29,17 @@ public class Controller {
 
     //Requesting the header
     @GetMapping("/headers")
-    public ResponseEntity<Map<String,String>> getHeader(@RequestHeader Map<String,String> mapHeaderValues) {
-       try {
+    public ResponseEntity<Map<String, String>> getHeader(@RequestHeader Map<String, String> mapHeaderValues) {
+        try {
 
-           log.info("The values are {}", mapHeaderValues);
+            log.info("The values are {}", mapHeaderValues);
 
 
-           return ResponseEntity.status(HttpStatus.OK).body(mapHeaderValues);
-       }
-       catch (Exception e){
-           return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-       }
-       }
+            return ResponseEntity.status(HttpStatus.OK).body(mapHeaderValues);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
 
     @PostMapping("/bloodgroups")
     public Entities addBlood(@RequestBody Entities BloodGroup) {
@@ -50,9 +49,7 @@ public class Controller {
 //            m.put("Name",this.imp.addBlood(BloodGroup).getName());
 //            m.put("Name",this.imp.addBlood(BloodGroup).getName());
 
-            return this.imp.addBlood(BloodGroup);
-
-
+        return this.imp.addBlood(BloodGroup);
 
 
     }
@@ -65,14 +62,13 @@ public class Controller {
 
     @DeleteMapping("/bloodgroups/{courseId}")
     public ResponseEntity<HttpStatus> deleteBloodGroup(@PathVariable String courseId) {
-try {
-    this.imp.deleteBloodGroup(Integer.parseInt(courseId));
-    return ResponseEntity.ok().build();
-}
-catch (Exception e){
-    return ResponseEntity.internalServerError().build();
-}
-}
+        try {
+            this.imp.deleteBloodGroup(Integer.parseInt(courseId));
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
+    }
 
 }
 
