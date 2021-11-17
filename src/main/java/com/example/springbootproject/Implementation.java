@@ -1,9 +1,14 @@
 package com.example.springbootproject;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,6 +19,7 @@ public class Implementation implements BloodGroup {
 
     List<Entities> list;
     Entities e;
+
 
     public Implementation() {
         list = new ArrayList<>();
@@ -71,6 +77,10 @@ public class Implementation implements BloodGroup {
         list = list.stream().filter(entities -> entities.getId() != courseId).collect(Collectors.toList());
 
     }
+
+
+
+
 
 }
 

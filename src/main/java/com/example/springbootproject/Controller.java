@@ -1,20 +1,25 @@
 package com.example.springbootproject;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
 
 
+
 @RestController
-@Slf4j
+
 public class Controller {
+    Logger log = LoggerFactory.getLogger(Controller.class);
     @Autowired
     Implementation imp;
+    @Autowired
+    ApiCaller caller;
+
 
     @GetMapping("/bloodgroups")
     public List<Entities> getBlood() {
@@ -28,18 +33,31 @@ public class Controller {
     }
 
     //Requesting the header
-    @GetMapping("/headers")
-    public ResponseEntity<Map<String, String>> getHeader(@RequestHeader Map<String, String> mapHeaderValues) {
-        try {
+//    @GetMapping("/headers")
+//    public ResponseEntity<Map<String, String>> getHeader(@RequestHeader Map<String, String> mapHeaderValues) {
+//        try {
+//
+//            log.info("The values are {}", mapHeaderValues);
+//
+//
+//            return ResponseEntity.status(HttpStatus.OK).body(mapHeaderValues);
+//        } catch (Exception e) {
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+//        }
+//    }
+    @PostMapping("/postapicaller")
+    public ResponseEntity<String> postApiCaller(@RequestBody Entities a){
+        log.info("The values are {}",a);
 
-            log.info("The values are {}", mapHeaderValues);
+        return ResponseEntity.status(HttpStatus.OK).body(caller.postApiCaller(a));
 
-
-            return ResponseEntity.status(HttpStatus.OK).body(mapHeaderValues);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
     }
+@GetMapping("/getapicaller")
+    public ResponseEntity<String> getApiCaller(Entities b){
+        log.info("The values are {}",b);
+
+        return ResponseEntity.status(HttpStatus.OK).body(caller.getApiCaller(b));
+}
 
     @PostMapping("/bloodgroups")
     public Entities addBlood(@RequestBody Entities BloodGroup) {
