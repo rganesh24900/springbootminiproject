@@ -1,7 +1,5 @@
 package com.example.springbootproject;
 
-import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
 public interface BloodGroup {
@@ -16,7 +14,6 @@ public interface BloodGroup {
     void deleteBloodGroup(int courseId);
 
 //     String postApiCaller(Entities a);
-
 
 
 }

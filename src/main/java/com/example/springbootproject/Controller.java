@@ -3,12 +3,11 @@ package com.example.springbootproject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
-
 
 
 @RestController
@@ -46,18 +45,19 @@ public class Controller {
 //        }
 //    }
     @PostMapping("/postapicaller")
-    public ResponseEntity<String> postApiCaller(@RequestBody Entities a){
-        log.info("The values are {}",a);
+    public ResponseEntity<String> postApiCaller(@RequestBody Entities a) {
+        log.info("The values are {}", a);
 
         return ResponseEntity.status(HttpStatus.OK).body(caller.postApiCaller(a));
 
     }
-@GetMapping("/getapicaller")
-    public ResponseEntity<String> getApiCaller(Entities b){
-        log.info("The values are {}",b);
+
+    @GetMapping("/getapicaller")
+    public ResponseEntity<String> getApiCaller(Entities b) {
+        log.info("The values are {}", b);
 
         return ResponseEntity.status(HttpStatus.OK).body(caller.getApiCaller(b));
-}
+    }
 
     @PostMapping("/bloodgroups")
     public Entities addBlood(@RequestBody Entities BloodGroup) {

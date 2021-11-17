@@ -19,8 +19,9 @@ public class SpringbootprojectApplication {
 
 
     }
+
     @Bean
-    public RestTemplate restTemplate (RestTemplateBuilder builder){
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
         RestTemplate restTemplate = builder
                 .setConnectTimeout(Duration.ofMillis(a))
                 .setReadTimeout(Duration.ofMillis(b)).build();
