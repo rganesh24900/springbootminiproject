@@ -1,0 +1,23 @@
+2021-11-18 14:58:39,407 INFO org.springframework.boot.StartupInfoLogger [main] Starting SpringbootprojectApplicationTests using Java 17.0.1 on SMT-LAP-154 with PID 14192 (started by Ganesh.Rajamani in C:\Users\Ganesh.Rajamani\Downloads\springbootproject)
+2021-11-18 14:58:39,407 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-18 14:58:39,412 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-11-18 14:58:42,188 INFO org.springframework.boot.StartupInfoLogger [main] Started SpringbootprojectApplicationTests in 3.225 seconds (JVM running for 4.948)
+2021-11-18 14:59:13,356 INFO org.springframework.boot.StartupInfoLogger [main] Starting SpringbootprojectApplication using Java 17.0.1 on SMT-LAP-154 with PID 13104 (C:\Users\Ganesh.Rajamani\Downloads\springbootproject\target\classes started by Ganesh.Rajamani in C:\Users\Ganesh.Rajamani\Downloads\springbootproject)
+2021-11-18 14:59:13,360 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-18 14:59:13,360 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-11-18 14:59:16,189 INFO org.springframework.boot.StartupInfoLogger [main] Started SpringbootprojectApplication in 3.564 seconds (JVM running for 4.546)
+2021-11-18 14:59:42,046 INFO com.example.springbootproject.Controller [http-nio-9090-exec-2] The values are Entities{id=0, bloodGrp='null', name='null', address='null'}
+2021-11-18 14:59:48,298 INFO com.example.springbootproject.Controller [http-nio-9090-exec-4] The values are Entities{id=0, bloodGrp='null', name='null', address='null'}
+2021-11-18 15:00:52,816 INFO org.springframework.boot.StartupInfoLogger [main] Starting SpringbootprojectApplication using Java 17.0.1 on SMT-LAP-154 with PID 13008 (C:\Users\Ganesh.Rajamani\Downloads\springbootproject\target\classes started by Ganesh.Rajamani in C:\Users\Ganesh.Rajamani\Downloads\springbootproject)
+2021-11-18 15:00:52,822 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-18 15:00:52,823 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-11-18 15:00:56,106 INFO org.springframework.boot.StartupInfoLogger [main] Started SpringbootprojectApplication in 4.318 seconds (JVM running for 5.532)
+2021-11-18 15:01:12,501 INFO com.example.springbootproject.Controller [http-nio-9090-exec-1] The values are Entities{id=0, bloodGrp='null', name='null', address='null'}
+2021-11-18 15:01:35,954 INFO com.example.springbootproject.Controller [http-nio-9090-exec-5] The values are Entities{id=0, bloodGrp='null', name='null', address='null'}
+2021-11-18 15:03:03,548 INFO com.example.springbootproject.Controller [http-nio-9090-exec-10] The values are Entities{id=14, bloodGrp='B+ve', name='Shami', address='BaCllkjl,lony'}
+2021-11-18 15:05:02,565 INFO org.springframework.boot.StartupInfoLogger [main] Starting SpringbootprojectApplication using Java 17.0.1 on SMT-LAP-154 with PID 1564 (C:\Users\Ganesh.Rajamani\Downloads\springbootproject\target\classes started by Ganesh.Rajamani in C:\Users\Ganesh.Rajamani\Downloads\springbootproject)
+2021-11-18 15:05:02,589 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-18 15:05:02,590 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-11-18 15:05:05,642 INFO org.springframework.boot.StartupInfoLogger [main] Started SpringbootprojectApplication in 4.183 seconds (JVM running for 6.295)
+2021-11-18 15:05:43,811 INFO com.example.springbootproject.Controller [http-nio-8080-exec-1] The values are Entities{id=16, bloodGrp='B+ve', name='Shami', address='BaCllkjl,lony'}
+2021-11-18 15:05:54,750 INFO com.example.springbootproject.Controller [http-nio-8080-exec-4] The values are Entities{id=0, bloodGrp='null', name='null', address='null'}
